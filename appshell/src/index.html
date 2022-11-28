@@ -18,7 +18,7 @@
 <import-map-overrides-full show-when-local-storage="devtools"></import-map-overrides-full>
 <script>
   const im = document.createElement('script');
-  im.type = 'importmap';
+  im.type = 'overridable-importmap';
   im.textContent = JSON.stringify({
     "imports": {
       "app": "http://localhost:3000/singleSpa.js"
