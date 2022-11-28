@@ -1,0 +1,27 @@
+{
+	"name": "vite-importmap",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"build": "yarn workspaces foreach --interlaced --verbose --parallel run build",
+		"start": "yarn build && concurrently \"yarn start:importmap\" \"yarn start:appshell\" \"yarn start:app\"",
+		"start:importmap": "npx http-server ./importmap -p 4000 --cors -a localhost",
+		"start:app": "npx http-server app/dist -p 3000 --cors -a localhost",
+		"start:appshell": "npx http-server appshell/dist -p 2000 -a localhost",
+		"lint": "eslint \"{**/*,*}.{ts,tsx,js,json}\""
+	},
+	"workspaces": [
+		"appshell",
+		"app"
+	],
+	"packageManager": "yarn@3.3.0",
+	"devDependencies": {
+		"@dodopizza/eslint-config": "^1.2.2",
+		"@rushstack/eslint-patch": "^1.2.0",
+		"concurrently": "^7.6.0",
+		"eslint": "^8.28.0",
+		"http-server": "^14.1.1",
+		"typescript": "^4.9.3"
+	}
+}

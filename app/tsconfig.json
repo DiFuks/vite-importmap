@@ -1,0 +1,23 @@
+{
+	"ts-node": {
+		"compilerOptions": {
+			"module": "CommonJS"
+		}
+	},
+	"compilerOptions": {
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"target": "es2018",
+		"moduleResolution": "node",
+		"jsx": "react-jsx",
+		"strict": true,
+		"module": "ESNext",
+		"noImplicitReturns": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"resolveJsonModule": true,
+		"noUncheckedIndexedAccess": false,
+
+		"baseUrl": "./"
+	},
+	"include": ["**/*.ts", "**/*.tsx", "**/*.js"]
+}
