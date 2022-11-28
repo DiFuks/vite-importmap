@@ -16,7 +16,16 @@
 <body>
 <meta name="importmap-type" content="importmap" />
 <import-map-overrides-full show-when-local-storage="devtools"></import-map-overrides-full>
-<script type="importmap" src="http://localhost:4000/importmap.json"></script>
+<script>
+  const im = document.createElement('script');
+  im.type = 'importmap';
+  im.textContent = JSON.stringify({
+    "imports": {
+      "app": "http://localhost:3000/singleSpa.js"
+    }
+  });
+  document.currentScript.after(im);
+</script>
 
 <div id="single-spa-application:app"></div>
 
