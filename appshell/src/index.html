@@ -17,14 +17,20 @@
 <meta name="importmap-type" content="importmap" />
 <import-map-overrides-full show-when-local-storage="devtools"></import-map-overrides-full>
 <script>
-  const im = document.createElement('script');
-  im.type = 'overridable-importmap';
-  im.textContent = JSON.stringify({
-    "imports": {
-      "app": "http://localhost:3000/singleSpa.js"
-    }
-  });
-  document.currentScript.after(im);
+  const im = document.createElement('script')
+  im.type = 'overridable-importmap'
+
+  const loadImportmap = async () => {
+    const result = await fetch('http://localhost:4000/importmap.json')
+
+    const importmap = await result.json()
+
+    im.textContent = JSON.stringify(importmap)
+
+    document.currentScript.after(im);
+  }
+
+  loadImportmap()
 </script>
 
 <div id="single-spa-application:app"></div>
