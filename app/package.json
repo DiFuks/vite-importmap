@@ -3,8 +3,7 @@
 	"packageManager": "yarn@3.3.0",
 	"scripts": {
 		"dev": "vite",
-		"build": "vite build",
-		"dev:single-spa": "vite --mode dev-single-spa"
+		"build": "vite build"
 	},
 	"devDependencies": {
 		"@types/node": "^18.11.9",

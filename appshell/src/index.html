@@ -21,6 +21,35 @@
   window.esmsInitOptions = {
     mapOverrides: true,
   }
+
+
+  window.addEventListener("import-map-overrides:init", () => {
+    const isEnabledOverride = !window.importMapOverrides.isDisabled('app')
+
+    if (isEnabledOverride) {
+      const overrideMap = window.importMapOverrides.getOverrideMap()
+
+      const kioskModuleUrl = overrideMap.imports.app
+
+      const { origin } = new URL(kioskModuleUrl)
+
+      const viteClientScript = document.createElement('script')
+      viteClientScript.src = `${origin}/@vite/client`
+      viteClientScript.type = 'module-shim'
+      document.head.append(viteClientScript)
+
+      const reactHmrScript = document.createElement('script')
+      reactHmrScript.type = 'module-shim'
+      reactHmrScript.innerHTML = `
+      import RefreshRuntime from '${origin}/@react-refresh'
+      RefreshRuntime.injectIntoGlobalHook(window)
+      window.$RefreshReg$ = () => {}
+      window.$RefreshSig$ = () => (type) => type
+      window.__vite_plugin_react_preamble_installed__ = true
+    `
+      document.head.append(reactHmrScript)
+    }
+  });
 </script>
 <script src="/importmapOverride.bundle.js"></script>
 
