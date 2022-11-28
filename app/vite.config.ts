@@ -16,7 +16,7 @@ const config: UserConfig = {
 			output: {
 				dir: path.join(rootPath, `./dist`),
 				entryFileNames: `singleSpa.js`,
-				format: `system`,
+				format: `module`,
 			},
 		},
 	},

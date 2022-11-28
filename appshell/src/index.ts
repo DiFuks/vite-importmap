@@ -1,11 +1,12 @@
-import { LifeCycles, registerApplication, start } from 'single-spa'
+import { registerApplication, start } from 'single-spa'
 
-import 'systemjs'
 import 'import-map-overrides'
 
 registerApplication(
 	`app`,
-	() => System.import<LifeCycles>(`app`),
+	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+	// @ts-ignore
+	() => import(/* webpackIgnore: true */ `app`),
 	location => location.pathname.startsWith(`/`),
 )
 
