@@ -6,6 +6,7 @@ import webpack from 'webpack'
 const config: webpack.Configuration = {
 	mode: `production`,
 	entry: {
+		importmapOverride: `import-map-overrides`,
 		appshell: `./src/index.ts`,
 	},
 	output: {
