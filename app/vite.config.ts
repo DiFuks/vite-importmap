@@ -1,14 +1,15 @@
-import react from '@vitejs/plugin-react'
 import process from 'node:process'
 import path from 'path'
 import { defineConfig } from 'vite'
+import { swcReactRefresh } from 'vite-plugin-swc-react-refresh'
 
 const rootPath = process.cwd()
 
 // eslint-disable-next-line import/no-default-export
 export default defineConfig(() => ({
 	root: path.join(rootPath, `./src`),
-	plugins: [react()],
+	plugins: [swcReactRefresh()],
+	esbuild: { jsx: `automatic` },
 	build: {
 		emptyOutDir: false,
 		rollupOptions: {

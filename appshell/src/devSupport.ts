@@ -22,8 +22,8 @@
 		const reactHmrScript = Object.assign(document.createElement(`script`), {
 			type: `module-shim`,
 			innerHTML: `
-          import RefreshRuntime from '${origin}/@react-refresh'
-          RefreshRuntime.injectIntoGlobalHook(window)
+          import { injectIntoGlobalHook } from '${origin}/@react-refresh'
+          injectIntoGlobalHook(window)
           window.$RefreshReg$ = () => {}
           window.$RefreshSig$ = () => (type) => type
           window.__vite_plugin_react_preamble_installed__ = true

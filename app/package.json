@@ -9,11 +9,11 @@
 		"@types/node": "^18.11.9",
 		"@types/react": "^18.0.25",
 		"@types/react-dom": "^18.0.9",
-		"@vitejs/plugin-react": "^2.2.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"single-spa-react": "^5.0.0",
 		"typescript": "^4.9.3",
-		"vite": "^3.2.4"
+		"vite": "^3.2.4",
+		"vite-plugin-swc-react-refresh": "^2.2.1"
 	}
 }
