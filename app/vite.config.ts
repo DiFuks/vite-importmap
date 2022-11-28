@@ -12,6 +12,7 @@ const config: UserConfig = {
 		emptyOutDir: false,
 		rollupOptions: {
 			input: path.join(rootPath, `./src/singleSpa.tsx`),
+			preserveEntrySignatures: `strict`,
 			output: {
 				dir: path.join(rootPath, `./dist`),
 				entryFileNames: `singleSpa.js`,
