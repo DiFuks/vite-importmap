@@ -4,7 +4,7 @@ registerApplication(
 	`app`,
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 	// @ts-ignore
-	() => import(/* webpackIgnore: true */ `http://localhost:5173/singleSpa.tsx`),
+	() => import(/* webpackIgnore: true */ `app`),
 	location => location.pathname.startsWith(`/`),
 )
 

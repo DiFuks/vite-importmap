@@ -1770,13 +1770,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/systemjs@npm:^6.13.0":
-  version: 6.13.0
-  resolution: "@types/systemjs@npm:6.13.0"
-  checksum: d469343545d713383009f046b93b3c0f068b930ed9cd43cf672ff36fd080a573d770cab93fbc55686b2a874576b49d71dd60eae595d232d6882fafe8231df881
-  languageName: node
-  linkType: hard
-
 "@types/webpack@npm:^5.28.0":
   version: 5.28.0
   resolution: "@types/webpack@npm:5.28.0"
@@ -1933,14 +1926,13 @@ __metadata:
     "@babel/preset-env": ^7.20.2
     "@babel/preset-typescript": ^7.18.6
     "@babel/runtime": 7.20.1
-    "@types/systemjs": ^6.13.0
     "@types/webpack": ^5.28.0
     babel-loader: ^9.1.0
     clean-webpack-plugin: ^4.0.0
     copy-webpack-plugin: ^11.0.0
+    es-module-shims: ^1.6.2
     import-map-overrides: ^2.4.2
     single-spa: ^5.9.4
-    systemjs: ^6.13.0
     ts-node: ^10.9.1
     typescript: ^4.9.3
     webpack: ^5.75.0
@@ -3125,6 +3117,13 @@ __metadata:
   version: 0.9.3
   resolution: "es-module-lexer@npm:0.9.3"
   checksum: 84bbab23c396281db2c906c766af58b1ae2a1a2599844a504df10b9e8dc77ec800b3211fdaa133ff700f5703d791198807bba25d9667392d27a5e9feda344da8
+  languageName: node
+  linkType: hard
+
+"es-module-shims@npm:^1.6.2":
+  version: 1.6.2
+  resolution: "es-module-shims@npm:1.6.2"
+  checksum: 1dee3c8c8f34786421f09b9ae7db2c8d33ce74c92e7d47a9836553175486a328a04bb9ec55a735516d1fc476f7b58fc458cfc890a82225f5eec74964c13feb2e
   languageName: node
   linkType: hard
 
@@ -6359,13 +6358,6 @@ __metadata:
     "@pkgr/utils": ^2.3.1
     tslib: ^2.4.0
   checksum: 83e054fe4494dab42114fc4ed36a11b85e18742d304ade3f40d3afb4ba4145d76183adba1f29e2c36e9a0a453b93a83e2387505f96a0efd901f562927a968c44
-  languageName: node
-  linkType: hard
-
-"systemjs@npm:^6.13.0":
-  version: 6.13.0
-  resolution: "systemjs@npm:6.13.0"
-  checksum: df8d7374249778291f3a85278fdb3e1b9d81ac07767b0a7f9edeca0ee45d847c19bceb01522c817605e2908d32a4fcfed6bacd707bfb7bd577774ab900d3707d
   languageName: node
   linkType: hard
 

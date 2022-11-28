@@ -6,7 +6,7 @@ import webpack from 'webpack'
 const config: webpack.Configuration = {
 	mode: `production`,
 	entry: {
-		importmapOverride: `import-map-overrides`,
+		importmapOverride: [`es-module-shims`, `import-map-overrides`],
 		appshell: `./src/index.ts`,
 	},
 	output: {

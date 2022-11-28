@@ -14,36 +14,18 @@
     </style>
 </head>
 <body>
-<meta name="importmap-type" content="importmap" />
+<meta name="importmap-type" content="importmap-shim" />
 <import-map-overrides-full show-when-local-storage="devtools"></import-map-overrides-full>
-<script>
-  const loadImportmap = async () => {
-    const result = await fetch('http://localhost:4000/importmap.json');
+<script type="importmap-shim" src="http://localhost:4000/importmap.json"></script>
+<script src="/importmapOverride.bundle.js"></script>
 
-    const importmap = await result.json();
-
-    const imScript = document.createElement('script');
-    imScript.type = 'overridable-importmap';
-    imScript.textContent = JSON.stringify(importmap);
-    document.head.append(imScript);
-
-    const imOverrideScript = document.createElement('script');
-    imOverrideScript.src = '/importmapOverride.bundle.js';
-    imOverrideScript.onload = () => {
-      const appShellScript = document.createElement('script');
-      appShellScript.type = 'module';
-      appShellScript.defer = true;
-      appShellScript.src = '/appshell.bundle.js';
-
-      document.head.append(appShellScript);
+<style>
+    div[id^="single-spa-application"]:not(:empty) {
+        height: 100%;
     }
-
-    document.head.append(imOverrideScript);
-  }
-
-  loadImportmap()
-</script>
+</style>
 
 <div id="single-spa-application:app"></div>
+<script type="module-shim" defer="defer" src="/appshell.bundle.js"></script>
 </body>
 </html>

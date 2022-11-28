@@ -2885,15 +2885,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["@types/systemjs", [\
-        ["npm:6.13.0", {\
-          "packageLocation": "./.yarn/cache/@types-systemjs-npm-6.13.0-d7ee3cc1fe-d469343545.zip/node_modules/@types/systemjs/",\
-          "packageDependencies": [\
-            ["@types/systemjs", "npm:6.13.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["@types/webpack", [\
         ["npm:5.28.0", {\
           "packageLocation": "./.yarn/cache/@types-webpack-npm-5.28.0-0dc39cc4ef-a038d7e12d.zip/node_modules/@types/webpack/",\
@@ -3123,14 +3114,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/preset-env", "virtual:8f62426059160f10aae6bd6afd50bb0af00cbcfc208323ac40b0d8572f3ee7401f002f90e4bcd4f7c31d2e15f36c46308406ba3eac5aa2eb44a3b90e25881746#npm:7.20.2"],\
             ["@babel/preset-typescript", "virtual:8f62426059160f10aae6bd6afd50bb0af00cbcfc208323ac40b0d8572f3ee7401f002f90e4bcd4f7c31d2e15f36c46308406ba3eac5aa2eb44a3b90e25881746#npm:7.18.6"],\
             ["@babel/runtime", "npm:7.20.1"],\
-            ["@types/systemjs", "npm:6.13.0"],\
             ["@types/webpack", "npm:5.28.0"],\
             ["babel-loader", "virtual:8f62426059160f10aae6bd6afd50bb0af00cbcfc208323ac40b0d8572f3ee7401f002f90e4bcd4f7c31d2e15f36c46308406ba3eac5aa2eb44a3b90e25881746#npm:9.1.0"],\
             ["clean-webpack-plugin", "virtual:8f62426059160f10aae6bd6afd50bb0af00cbcfc208323ac40b0d8572f3ee7401f002f90e4bcd4f7c31d2e15f36c46308406ba3eac5aa2eb44a3b90e25881746#npm:4.0.0"],\
             ["copy-webpack-plugin", "virtual:8f62426059160f10aae6bd6afd50bb0af00cbcfc208323ac40b0d8572f3ee7401f002f90e4bcd4f7c31d2e15f36c46308406ba3eac5aa2eb44a3b90e25881746#npm:11.0.0"],\
+            ["es-module-shims", "npm:1.6.2"],\
             ["import-map-overrides", "npm:2.4.2"],\
             ["single-spa", "npm:5.9.4"],\
-            ["systemjs", "npm:6.13.0"],\
             ["ts-node", "virtual:8f62426059160f10aae6bd6afd50bb0af00cbcfc208323ac40b0d8572f3ee7401f002f90e4bcd4f7c31d2e15f36c46308406ba3eac5aa2eb44a3b90e25881746#npm:10.9.1"],\
             ["typescript", "patch:typescript@npm%3A4.9.3#~builtin<compat/typescript>::version=4.9.3&hash=d73830"],\
             ["webpack", "virtual:8f62426059160f10aae6bd6afd50bb0af00cbcfc208323ac40b0d8572f3ee7401f002f90e4bcd4f7c31d2e15f36c46308406ba3eac5aa2eb44a3b90e25881746#npm:5.75.0"],\
@@ -4675,6 +4665,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/es-module-lexer-npm-0.9.3-ff6236dadb-84bbab23c3.zip/node_modules/es-module-lexer/",\
           "packageDependencies": [\
             ["es-module-lexer", "npm:0.9.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["es-module-shims", [\
+        ["npm:1.6.2", {\
+          "packageLocation": "./.yarn/cache/es-module-shims-npm-1.6.2-15ec69049d-1dee3c8c8f.zip/node_modules/es-module-shims/",\
+          "packageDependencies": [\
+            ["es-module-shims", "npm:1.6.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -8472,15 +8471,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["synckit", "npm:0.8.4"],\
             ["@pkgr/utils", "npm:2.3.1"],\
             ["tslib", "npm:2.4.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["systemjs", [\
-        ["npm:6.13.0", {\
-          "packageLocation": "./.yarn/cache/systemjs-npm-6.13.0-35fc4d5386-df8d737424.zip/node_modules/systemjs/",\
-          "packageDependencies": [\
-            ["systemjs", "npm:6.13.0"]\
           ],\
           "linkType": "HARD"\
         }]\
